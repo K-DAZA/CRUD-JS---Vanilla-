@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/js.png" type="image/x-icon">
+  <title>CRUD Vanilla JS</title>
+
+
+  <!--BOOTSTRAP CSS CDN-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <!--TAILWIND CSS CDN-->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--ANIMATIONS CSS-->
+  <link rel="stylesheet" href="../css/animations.css">
+
+</head>
+<body style="background-color: #263238;" class="p-2 h-screen">
+
+  <!--Contenedor Principal-->
+  <div class="container h-5/6 bg-dark mt-5 md:flex rounded p-0">
+
+      <div class="overflow-y-scroll h-2/5 md:h-full lg:w-4/6 bg-white p-5">
+        <table class=" mx-auto text-center w-4/6 border-dark border-2" id="tabla">
+
+          <!--CABECERA DE LA TABLA-->
+          <tr>
+            <td class="border-dark border-2 bg-black text-white">Id 🔢</td>
+            <td class="border-dark border-2 bg-black text-white">Nombres 🕴️</td>
+            <td class="border-dark border-2 bg-black text-white">Apellidos 🕴️</td>
+          </tr>
+
+          <!--DATOS DE LA TABLA -->
+          <tr>
+            <td class="border-dark border-2">1</td>
+            <td class="border-dark border-2">Carlos</td>
+            <td class="border-dark border-2">Heredia</td>
+          </tr>
+          
+        </table>
+      </div>
+  
+      <div class="overflow-y-scroll w-full h-4/6 lg:w-2/4 bg-black md:h-full md:overflow-y-scroll 2xl:overflow-visible">
+        <h1 class="p-3 text-white text-4xl font-bold text-center mt-4">CRUD Javascript Vanilla</h1>
+
+        <!--NOMBRES Y APELLIDOS DEL USUARIO-->
+        <div class="p-5">
+          <label for="" class="text-white mt-5 text-2xl">Nombres 🕴️:</label>
+          <input type="text" name="" id="txtNombre" class="form-control mt-3" autocomplete="off">
+
+          <label for="" class="text-white mt-5 text-2xl">Apellidos 🕴️:</label>
+          <input type="text" name="" id="txtApellido" class="form-control mt-3" autocomplete="off">
+
+
+          <!--BOTONES ACCIONES CRUD -->
+          <button class="btn btn-primary mt-5" id="btn_ingresar">Ingresar Usuario</button>
+          <button class="btn btn-danger mt-5" id="btn_eliminar">Eliminar Usuario</button>
+          <button class="btn btn-warning mt-5">Modificar Usuario</button>
+
+          <!--CONFIRMAR ELIMINACION DE USUARIO-->
+          <div class="d-none" id="apartado_eliminar">
+            <label for="" class="text-white mt-5 text-2xl col-12">Id del usuario:</label>
+            <input type="number" name="" id="idUsuario" class="form-control mt-3" autocomplete="off">
+            <button class="btn btn-danger mt-5" id="btn_confirm_eliminar">Borrar usuario</button>
+          </div>
+
+          <!--PRESENTACION PROYECTO-->
+          <div class="text-white mt-5 md:flex" id="container_creditos">
+
+            <img src="../images/js.png" alt="" srcset="" class="img-responsive w-20 mt-4">
+
+            <p class="mt-4 md:ml-10 ">
+              Este <strong>CRUD</strong> fue hecho con Javascript en el lado del Frontend - Navegador,
+              crea, elimina y modifica datos puestos en una tabla.
+              <strong>Development By: Kevin Jefrey Daza Acosta</strong>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+  </div>
+
+
+  <!--SCRIPTS BOOTSTRAP CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+  integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+  integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  
+  <script  src="../js/agregar.js"></script>
+  <script src="../js/eliminar.js"></script>
+  
+</body>
+</html>

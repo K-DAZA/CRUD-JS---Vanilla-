@@ -8,7 +8,7 @@
   btnIngresar.addEventListener('click', () => {
     
   
-    const txtNombre = document.getElementById('txtNombre').value;
+    let txtNombre = document.getElementById('txtNombre').value;
     const txtApellido = document.getElementById("txtApellido").value;
     
     const tr = document.createElement('tr');
@@ -32,9 +32,9 @@
 
     for(let i = 0; i < elementos.length; i++){
         tr.setAttribute("id", `tr${i}`);
-        tdNombre.setAttribute('id', `dato${i}`);
-        tdApellido.setAttribute("id", `dato${i}`);
-        tdId.setAttribute("id", `dato${i}`);
+        tdNombre.setAttribute('id', `nombre${i}`);
+        tdApellido.setAttribute("id", `apellido${i}`);
+        tdId.setAttribute("id", `id${i}`);
         tdId.textContent = i;
     }
 
